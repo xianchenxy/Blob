@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "title": "InkBlogger",
+      "img": "InkBlogger.png",
+      "description": "最深的记忆不如最浅的墨水",
+      "link": "https://github.com/bullshitking-99/InkBlogger"
+    },
+    {
+      "title": "GymBookSystem",
+      "img": "GymBookSystem.png",
+      "description": "面向北工大师生的运动场地预约管理系统",
+      "link": "https://github.com/bullshitking-99/GymBookSystem"
+    },
+    {
+      "title": "CapsuleMS",
+      "img": "CapsuleMS.png",
+      "description": "面向北BJUT实验室自产项目，正式名称：时空小胶囊工大师生的运动场地预约管理系统",
+      "link": "https://github.com/bullshitking-99/CapsuleMS"
+    }
+  ]
+}
