@@ -19,7 +19,7 @@ declare module '@vue/runtime-core' {
     ElSwitch: typeof import('element-plus/es')['ElSwitch']
     ElTabPane: typeof import('element-plus/es')['ElTabPane']
     ElTabs: typeof import('element-plus/es')['ElTabs']
-    Navbar: typeof import('./src/components/Navbar/index.vue')['default']
+    Navbar: typeof import('./src/components/Navbar/navbar.vue')['default']
     PostCard: typeof import('./src/components/PostCard/index.vue')['default']
     ProjectCard: typeof import('./src/components/ProjectCard/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

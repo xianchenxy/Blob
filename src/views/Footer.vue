@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import user from "../../personal Tailor/user.json";
+import user from "@DataConfig/user.json";
 
 const curYear = new Date().getFullYear();
 </script>
 
 <template>
   <div class="footer">
-    <p>{{ user.Title }}</p>
+    <p>{{ user.title }}</p>
     <p>
       <i>{{ user.motto }}</i>
     </p>

@@ -2,11 +2,11 @@
 import { reactive, ref } from "vue";
 // 维护一个user对象，存储用户基本信息
 // 后期由用户导入或从default_demo中获取
-import user from "../../personal Tailor/user.json";
+import user from "@DataConfig/user.json";
 import Avatar from "../components/Avatar/index.vue";
 
 // 利用import获取打包文件的动态地址，直接
-import avatarPath from "../../personal Tailor/assets/avatar.png";
+import avatarPath from "@DataConfig/assets/avatar.png";
 
 const avatar_size = ref("300px");
 </script>

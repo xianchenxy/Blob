@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import PostCard from "../components/PostCard/index.vue";
-import { posts } from "../../posts/posts.json";
+import { posts } from "@posts/posts.json";
 
 // 为了均匀子盒子的分布，强行使用flex布局
 // 在尾行添加几个空盒子,以使得真盒子左对齐

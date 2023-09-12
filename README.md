@@ -28,12 +28,12 @@ _注意：确保在继续之前安装了_[_Node.js_](https://nodejs.org/)_和_[_
 
 #### 个人信息配置
 
-在 `/personal Tailor/user.json` 中填写你的个人信息。 例如：
+在 `/DataConfig/user.json` 中填写你的个人信息。 例如：
 
 ```JSON
 {
   "name": "Terry Lee",
-  "avatarPath": "../personal Tailor/assets/avatar.png",
+  "avatarPath": "../DataConfig/assets/avatar.png",
   "motto": "THINK TWICE | CODE ONCE",
   "description": "A Little Front-Ender",
   "link": "https://github.com/bullshitking-99",
@@ -65,7 +65,7 @@ _注意：确保在继续之前安装了_[_Node.js_](https://nodejs.org/)_和_[_
 
 #### 个人介绍
 
-您需要提供一个 MarkDown 文件以显示在 About 页面上。 在 Markdown 文件中写一些关于你自己的东西：`personal Tailor/aboutMe.md`
+您需要提供一个 MarkDown 文件以显示在 About 页面上。 在 Markdown 文件中写一些关于你自己的东西：`DataConfig/aboutMe.md`
 
 ```Markdown
 # 👋 Hi, I’m Minghe Lee, a young front-end lover

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { contact } from "../../personal Tailor/user.json";
-const { html: about } = await import("../../personal Tailor/aboutMe.md");
+import { contact } from "@DataConfig/user.json";
+const { html: about } = await import("@DataConfig/aboutMe.md");
 </script>
 
 <template>
