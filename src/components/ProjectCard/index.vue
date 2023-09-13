@@ -1,60 +1,61 @@
 <script lang="ts" setup>
-import { useRouter } from "vue-router";
+import {useRouter} from 'vue-router';
 
 const props = defineProps({
-  title: String,
-  link: String,
-  img: String,
+    title: String,
+    link: String,
+    img: String
 });
 
-const ProjectTitle = props.title || "My Fantastic Project";
-const backgroundImg = props.img || "../../assets/project/default.png";
+const ProjectTitle = props.title || 'My Fantastic Project';
+const backgroundImg = props.img || '../../assets/project/default.png';
 
 const router = useRouter();
+
 function goPost(ProjectTitle: String) {
-  router.push(`/post/${ProjectTitle}`);
-  // if postName.md不存在，将在ViewPost中跳转404
+    router.push(`/post/${ProjectTitle}`);
+    // if postName.md不存在，将在ViewPost中跳转404
 }
 
 // 获取图片的动态路径
-const getSrc = (name: string) =>
-  new URL(`../../../project/assets/${name}`, import.meta.url).href;
+const getSrc = (name: string) => new URL(`../../../project/assets/${name}`, import.meta.url).href;
 </script>
 
 <template>
-  <div class="container">
-    <!-- 图片容器 -->
-    <div class="imgContainer">
-      <img :src="getSrc(backgroundImg)" />
+	<div class="container">
+		<!-- 图片容器 -->
+		<div class="imgContainer">
+			<img :src="getSrc(backgroundImg)" />
 
-      <!-- 交互区域 -->
-      <div class="interactions">
-        <div class="link">
-          <a :href="link" target="_blank">
-            <slot name="link-img">
-              <img src="../../assets/project/github.svg" />
-            </slot>
-          </a>
-        </div>
-        <div class="title" @click="goPost(ProjectTitle)">
-          <span>{{ ProjectTitle }}</span>
-        </div>
-      </div>
-    </div>
+			<!-- 交互区域 -->
+			<div class="interactions">
+				<div class="link">
+					<a :href="link" target="_blank">
+						<slot name="link-img">
+							<img src="../../assets/project/github.svg" />
+						</slot>
+					</a>
+				</div>
+				<div class="title" @click="goPost(ProjectTitle)">
+					<span>{{ ProjectTitle }}</span>
+				</div>
+			</div>
+		</div>
 
-    <!-- 文字容器 -->
-    <div class="text">
-      <slot name="description">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-      </slot>
-    </div>
-  </div>
+		<!-- 文字容器 -->
+		<div class="text">
+			<slot name="description">
+				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+			</slot>
+		</div>
+	</div>
 </template>
 
 <style scoped lang="scss">
 * {
   box-sizing: border-box;
 }
+
 .container {
   width: 350px;
   height: 250px;
@@ -66,6 +67,7 @@ const getSrc = (name: string) =>
       img {
         transform: scale(1.1);
       }
+
       .interactions {
         transform: translate(15px, -105px);
       }
@@ -95,6 +97,7 @@ const getSrc = (name: string) =>
 
       transition: all 0.25s ease;
     }
+
     .interactions {
       transition: all 0.25s ease;
       transform: translate(15px, -55px);
@@ -112,10 +115,12 @@ const getSrc = (name: string) =>
           box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.3);
         }
       }
+
       .link {
         width: 35px;
         background-color: black;
         transition: all 0.25s ease;
+
         a {
           display: block;
           width: 100%;
@@ -123,12 +128,14 @@ const getSrc = (name: string) =>
           display: flex;
           justify-content: center;
           align-items: center;
+
           img {
             width: 50%;
             height: 50%;
           }
         }
       }
+
       .title {
         font-size: 14px;
         // filter: blur(2px);

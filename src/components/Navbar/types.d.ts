@@ -1,5 +1,6 @@
 interface InavItem {
-  name: string;
-  url: string;
+    name: string;
+    url: string;
 }
-export type { InavItem };
+
+export type {InavItem};

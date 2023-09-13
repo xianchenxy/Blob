@@ -20,7 +20,7 @@ try {
     // if postName不存在，跳转404
     console.error('postName不存在，跳转404', e);
     console.debug('posts: ', post, 'postName: ', postName);
-    router.push("/404");
+    router.push('/404');
 }
 
 // 获取图片的动态路径

@@ -1,30 +1,29 @@
 <script lang="ts" setup>
-import { contact } from "@DataConfig/user.json";
-const { html: about } = await import("@DataConfig/aboutMe.md");
+const {html: about} = await import('@DataConfig/aboutMe.md');
 </script>
 
 <template>
-  <h1 style="font-size: 200%; text-align: center">About Me</h1>
-  <p>Who am I and What am I doing now</p>
-  <el-divider />
-  <main>
-    <div class="about center">
-      <div class="vuepress-markdown-body" v-html="about"></div>
-    </div>
-    <div class="contact">
-      <h2>Contact Me</h2>
-      <div class="grid-3_xs-1_sm-2_md-2 gridContainer">
-        <div v-for="item in Object.keys(contact)" class="col">
-          <a :href="contact[item as keyof typeof contact]" target="_blank">
-            <div class="contactItem">
-              <h3>{{ item }}</h3>
-              <p>{{ contact[item as keyof typeof contact] }}</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </main>
+	<h1 style="font-size: 200%; text-align: center">About Me</h1>
+	<p>Who am I and What am I doing now</p>
+	<el-divider />
+	<main>
+		<div class="about center">
+			<div class="vuepress-markdown-body" v-html="about"></div>
+		</div>
+		<div class="contact">
+			<h2>Contact Me</h2>
+			<div class="grid-3_xs-1_sm-2_md-2 gridContainer">
+				<div v-for="item in Object.keys(contact)" class="col">
+					<a :href="contact[item as keyof typeof contact]" target="_blank">
+						<div class="contactItem">
+							<h3>{{ item }}</h3>
+							<p>{{ contact[item as keyof typeof contact] }}</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</main>
 </template>
 
 <style scoped lang="scss">
@@ -43,8 +42,10 @@ p {
     max-width: 805px;
   }
 }
+
 .contact {
   box-sizing: border-box;
+
   h2 {
     text-align: center;
     width: 100%;
@@ -54,6 +55,7 @@ p {
   .gridContainer {
     width: 100vw;
   }
+
   .contactItem {
     margin: 0 auto;
     max-width: 400px;

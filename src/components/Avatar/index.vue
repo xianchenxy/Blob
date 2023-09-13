@@ -6,22 +6,21 @@
  -->
 
 <script lang="ts" setup>
-import { ref } from "vue";
 const props = defineProps({
-  src: String,
-  size: String,
+    src: String,
+    size: String
 });
 </script>
 
 <template>
-  <div class="container">
-    <!-- <el-avatar :src="src" :size="size"></el-avatar> -->
+	<div class="container">
+		<!-- <el-avatar :src="src" :size="size"></el-avatar> -->
 
-    <span class="avatar">
+		<span class="avatar">
       <img :src="src" />
       <img :src="src" class="back" />
     </span>
-  </div>
+	</div>
 </template>
 
 <style scoped lang="scss">
@@ -58,6 +57,7 @@ const props = defineProps({
       filter: blur(15px);
       z-index: -10;
     }
+
     // animation - 上下悬浮
     animation: float 4s infinite;
     animation-direction: alternate;

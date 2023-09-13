@@ -1,22 +1,20 @@
 <script lang="ts" setup>
-import { useRouter } from "vue-router";
+import {useRouter} from 'vue-router';
 
 const router = useRouter();
 </script>
 
 <template>
-  <div class="notFound">
-    <div class="container">
-      <h1>404</h1>
-      <p>NOT FOUND</p>
-      <el-divider></el-divider>
-      <br />
-      <p>Dont Go Gentle Into The Night --《Interstellar》</p>
-      <el-button size="large" @click="router.push('/')"
-        >Return With Me</el-button
-      >
-    </div>
-  </div>
+	<div class="notFound">
+		<div class="container">
+			<h1>404</h1>
+			<p>NOT FOUND</p>
+			<el-divider></el-divider>
+			<br />
+			<p>Dont Go Gentle Into The Night --《Interstellar》</p>
+			<el-button size="large" @click="router.push('/')">Return With Me</el-button>
+		</div>
+	</div>
 </template>
 
 <style scoped lang="scss">
@@ -33,10 +31,12 @@ const router = useRouter();
     h1 {
       font-size: 300%;
     }
+
     p {
       font-style: italic;
       opacity: 0.5;
     }
+
     p:last-of-type {
       margin-bottom: 20px;
     }

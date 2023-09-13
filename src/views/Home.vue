@@ -1,34 +1,33 @@
 <script lang="ts" setup>
-import { reactive, ref } from "vue";
+import {ref} from 'vue';
 // 维护一个user对象，存储用户基本信息
 // 后期由用户导入或从default_demo中获取
-import user from "@DataConfig/user.json";
-import Avatar from "../components/Avatar/index.vue";
+import user from '@DataConfig/user.json';
+import Avatar from '../components/Avatar/index.vue';
 
 // 利用import获取打包文件的动态地址，直接
-import avatarPath from "@DataConfig/assets/avatar.png";
+import avatarPath from '@DataConfig/assets/avatar.png';
 
-const avatar_size = ref("300px");
+const avatar_size = ref('300px');
 </script>
 
 <template>
-  <div class="home">
-    <div class="avatar">
-      <Avatar
-        :src="avatarPath ? avatarPath : '../assets/avatar.jpg'"
-        :size="avatar_size"
-      ></Avatar>
-    </div>
+	<div class="home">
+		<div class="avatar">
+			<Avatar :src="avatarPath ? avatarPath : '../assets/avatar.jpg'"
+					:size="avatar_size"
+			></Avatar>
+		</div>
 
-    <!-- 用户信息展示 -->
-    <div class="user_info">
-      <h1>{{ user.name }}</h1>
-      <h4>
-        <a :href="user.link">{{ user.description }}</a>
-      </h4>
-      <p>{{ user.motto }}</p>
-    </div>
-  </div>
+		<!-- 用户信息展示 -->
+		<div class="user_info">
+			<h1>{{ user.name }}</h1>
+			<h4>
+				<a :href="user.link">{{ user.description }}</a>
+			</h4>
+			<p>{{ user.motto }}</p>
+		</div>
+	</div>
 </template>
 
 <style scoped lang="scss">

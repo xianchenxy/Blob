@@ -1,27 +1,27 @@
 <script lang="ts" setup>
-import user from "@DataConfig/user.json";
+import user from '@DataConfig/user.json';
 
 const curYear = new Date().getFullYear();
 </script>
 
 <template>
-  <div class="footer">
-    <p>{{ user.title }}</p>
-    <p>
-      <i>{{ user.motto }}</i>
-    </p>
-    <br />
-    <span v-if="curYear === Number(user.blogStartYear)">
+	<div class="footer">
+		<p>{{ user.title }}</p>
+		<p>
+			<i>{{ user.motto }}</i>
+		</p>
+		<br />
+		<span v-if="curYear === Number(user.blogStartYear)">
       &copy; {{ curYear }} {{ user.name }}.&nbsp; Powered by
     </span>
-    <span v-else>
+		<span v-else>
       &copy; {{ user.blogStartYear }} - {{ curYear }} {{ user.name }}.&nbsp;
       Powered by
     </span>
-    <a href="https://github.com/bullshitking-99/InkBlogger" target="_blank"
-      >InkBlogger</a
-    >.
-  </div>
+		<a href="https://github.com/bullshitking-99/InkBlogger" target="_blank"
+		>InkBlogger</a
+		>.
+	</div>
 </template>
 
 <style scoped lang="scss">
@@ -33,10 +33,12 @@ const curYear = new Date().getFullYear();
   width: 100%;
   padding-top: 20px;
   line-height: 42px;
+
   p:first-child {
     font-size: 1.3em;
     font-weight: bold;
   }
+
   p:last-of-type {
     opacity: 0.5;
   }
