@@ -9,12 +9,10 @@ const router = useRouter();
 const postName = route.params.postName as string;
 const post = ref<String>('');
 const postCover = ref<string>('');
-const mdFiles = await import.meta.glob(`@posts/post/**/*.md`, {as: 'url'});
-const curMdFilePath = Object.keys(mdFiles).find(fileName => fileName.includes(postName)) || '';
 
 try {
     // 动态导入md，异步导出html
-    const {html} = await import(curMdFilePath);
+    const {html} = await import(`../../posts/post/${postName}.md`);
     post.value = html;
     const {cover} = posts.filter(post => post.name === postName)[0];
     postCover.value = cover;
@@ -25,10 +23,8 @@ try {
     router.push("/404");
 }
 
-const imgRootPath = new URL(`@posts/assets`, import.meta.url).pathname;
-const paths = import.meta.glob(`@posts/assets/*`, {as: 'url'});
 // 获取图片的动态路径
-const getSrc = (name: string) => Object.keys(paths).find(path => path === `${imgRootPath}/${name}`);
+const getSrc = (name: string) => new URL(`../../posts/assets/${name}`, import.meta.url).href;
 </script>
 
 <template>
