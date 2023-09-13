@@ -12,27 +12,27 @@ const router = useRouter();
 
 // 接收控制参数，使navbar在页面滚动时出现shadow
 const props = defineProps({
-    pageScrolled: Boolean as PropType<boolean>
+	pageScrolled: Boolean as PropType<boolean>
 });
 
 // navbar的标题集合
 const NavItem: Ref<InavItem[]> = ref([
-    {
-        name: 'Home',
-        url: '/'
-    },
-    {
-        name: 'Posts',
-        url: '/posts'
-    },
-    {
-        name: 'Projects',
-        url: '/projects'
-    },
-    {
-        name: 'About',
-        url: '/about'
-    }
+	{
+		name: 'Home',
+		url: '/'
+	},
+	{
+		name: 'Posts',
+		url: '/posts'
+	},
+	{
+		name: 'Projects',
+		url: '/projects'
+	},
+	{
+		name: 'About',
+		url: '/about'
+	}
 ]);
 
 // 当前指向的页面路由
@@ -68,11 +68,11 @@ const title = ref('Lee\'s Blog');
 			<!-- 页面导航按钮 窄屏幕时消失 -->
 			<el-col :span="12" class="nav-link">
 				<router-link
-						v-for="(link, index) in NavItem"
-						:key="index"
-						:to="active === link.url ? '' : link.url"
-						:class="active === link.url ? 'nav-active' : ''"
-						class="link-item theme-color-changer"
+					v-for="(link, index) in NavItem"
+					:key="index"
+					:to="active === link.url ? '' : link.url"
+					:class="active === link.url ? 'nav-active' : ''"
+					class="link-item theme-color-changer"
 				>
 					{{ link.name }}
 				</router-link>
@@ -83,63 +83,61 @@ const title = ref('Lee\'s Blog');
 			</el-col>
 		</el-row>
 	</div>
-	<!-- navbar下层的等面积实体 -->
-	<div style="min-height: 64px; border-radius: 0 0 24px 24px"></div>
 </template>
 
 <style scoped lang="scss">
 .backboard {
-  box-sizing: border-box;
-  z-index: 1000;
-  min-height: 64px;
-  // background-color: var(--el-color-white);
-  border-radius: 0 0 24px 24px;
-  position: fixed;
-  width: 100%;
+	top: 0;
+	position: sticky;
+	box-sizing: border-box;
+	z-index: 1000;
+	min-height: 64px;
+	// background-color: var(--el-color-white);
+	border-radius: 0 0 24px 24px;
 
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 
-  span {
-    display: block;
-    margin-left: 1.2em;
-    font-size: 1.17rem;
-    font-weight: 600;
-  }
+	span {
+		display: block;
+		margin-left: 1.2em;
+		font-size: 1.17rem;
+		font-weight: 600;
+	}
 
-  .nav-item {
-    display: flex;
-    align-items: center;
-  }
+	.nav-item {
+		display: flex;
+		align-items: center;
+	}
 
-  .nav-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	.nav-link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-    .link-item {
-      padding: 10px 15px;
-      font-size: 0.95rem;
-      opacity: 0.6;
-      font-weight: 700;
-      transition: opacity 0.2s ease;
+		.link-item {
+			padding: 10px 15px;
+			font-size: 0.95rem;
+			opacity: 0.6;
+			font-weight: 700;
+			transition: opacity 0.2s ease;
 
-      &:hover {
-        opacity: 1;
-      }
-    }
+			&:hover {
+				opacity: 1;
+			}
+		}
 
-    .nav-active {
-      opacity: 1;
-    }
-  }
+		.nav-active {
+			opacity: 1;
+		}
+	}
 
-  .theme-changer {
-    flex-direction: row-reverse;
-  }
+	.theme-changer {
+		flex-direction: row-reverse;
+	}
 }
 
 .nav-shadow {
-  box-shadow: var(--el-box-shadow-light);
+	box-shadow: var(--el-box-shadow-light);
 }
 </style>

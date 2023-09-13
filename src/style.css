@@ -26,6 +26,7 @@ html.dark {
 
 body {
     height: 100%;
+    overflow: hidden;
 }
 
 /* flex垂直居中类 */

@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import {contact} from '@DataConfig/user.json';
+
 const {html: about} = await import('@DataConfig/aboutMe.md');
 </script>
 
@@ -30,50 +32,48 @@ const {html: about} = await import('@DataConfig/aboutMe.md');
 @import url(../../public/styles/gridlex.min.css);
 
 p {
-  text-align: center;
-  font-style: italic;
-  opacity: 0.5;
+	text-align: center;
+	font-style: italic;
+	opacity: 0.5;
 }
 
 .about {
-  height: 50vh;
-
-  .vuepress-markdown-body {
-    max-width: 805px;
-  }
+	.vuepress-markdown-body {
+		max-width: 805px;
+	}
 }
 
 .contact {
-  box-sizing: border-box;
+	box-sizing: border-box;
 
-  h2 {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 50px;
-  }
+	h2 {
+		text-align: center;
+		width: 100%;
+		margin-bottom: 50px;
+	}
 
-  .gridContainer {
-    width: 100vw;
-  }
+	.gridContainer {
+		max-width: calc(100vw - 0.5rem * 2);
+	}
 
-  .contactItem {
-    margin: 0 auto;
-    max-width: 400px;
-    text-align: center;
-    background-color: rgb(var(--background-color));
-    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    cursor: pointer;
-    padding: 15px 0;
-    transition: all 0.25s ease;
+	.contactItem {
+		margin: 0 auto;
+		max-width: 400px;
+		text-align: center;
+		background-color: rgb(var(--background-color));
+		box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+		border-radius: 20px;
+		cursor: pointer;
+		padding: 15px 0;
+		transition: all 0.25s ease;
 
-    &:hover {
-      transform: scale(1.05);
-    }
+		&:hover {
+			transform: scale(1.05);
+		}
 
-    * {
-      margin-bottom: 10px;
-    }
-  }
+		* {
+			margin-bottom: 10px;
+		}
+	}
 }
 </style>
