@@ -1,4 +1,5 @@
 import {defineConfig} from 'vite';
+import {PreRenderedAsset} from 'rollup'
 import vue from '@vitejs/plugin-vue';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
@@ -48,9 +49,9 @@ export default defineConfig({
                 // 梳理分流原dist/assets目录
                 chunkFileNames: 'static/js/[name]-[hash].js',
                 entryFileNames: 'static/js/[name]-[hash].js',
-                assetFileNames(id: string): string {
+                assetFileNames(id: PreRenderedAsset): string {
                     if (id.name.endsWith('expect.png')) {
-                        console.log(id);
+                        console.log(id); // todo: remove origin expect.png
                         return 'public/[name].[ext]';
                     }
                     return 'static/[ext]/[name]-[hash].[ext]';
