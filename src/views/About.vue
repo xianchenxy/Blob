@@ -41,6 +41,10 @@ p {
 	.vuepress-markdown-body {
 		max-width: 805px;
 	}
+
+	::v-deep(li) {
+		margin: 12px 0;
+	}
 }
 
 .contact {
