@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Avatar: typeof import('./src/components/Avatar/index.vue')['default']
+    BackgroundMusic: typeof import('./src/components/Navbar/backgroundMusic.vue')['default']
     Button: typeof import('./src/components/button/index.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCard: typeof import('element-plus/es')['ElCard']

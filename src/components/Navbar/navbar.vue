@@ -6,6 +6,7 @@ import {PropType, ref} from 'vue';
 import {useRouter} from 'vue-router';
 import sideBar from './sideBar.vue';
 import themeChanger from './themeChanger.vue';
+import BackgroundMusic from './backgroundMusic.vue';
 import user from '@DataConfig/user.json';
 
 const router = useRouter();
@@ -17,22 +18,10 @@ const props = defineProps({
 
 // navbar的标题集合
 const NavItem: Ref<InavItem[]> = ref([
-	{
-		name: 'Home',
-		url: '/'
-	},
-	{
-		name: 'Posts',
-		url: '/posts'
-	},
-	{
-		name: 'Projects',
-		url: '/projects'
-	},
-	{
-		name: 'About',
-		url: '/about'
-	}
+	{name: 'Home', url: '/'},
+	{name: 'Posts', url: '/posts'},
+	{name: 'Projects', url: '/projects'},
+	{name: 'About', url: '/about'}
 ]);
 
 // 当前指向的页面路由
@@ -40,7 +29,7 @@ const active = computed(() => router.currentRoute.value.path);
 
 // 传入sideBar组件的控制参数
 const openDrawer: Ref<boolean> = ref(false);
-const title = ref('Lee\'s Blog');
+const title = ref('ZhangHuaqing\'s Blog\n');
 </script>
 
 <template>
@@ -78,7 +67,8 @@ const title = ref('Lee\'s Blog');
 				</router-link>
 			</el-col>
 			<!-- 主题切换组件 -->
-			<el-col :span="6" class="nav-item" style="flex-direction: row-reverse">
+			<el-col :span="6" class="nav-item" style="flex-direction: row-reverse;">
+				<BackgroundMusic style="margin-right: 20px;"></BackgroundMusic>
 				<themeChanger style="margin-right: 20px"></themeChanger>
 			</el-col>
 		</el-row>
