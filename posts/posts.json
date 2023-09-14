@@ -87,6 +87,14 @@
       "description": "",
       "date": "2022-10-10",
       "name": "Recursion_stacks"
+    },
+    {
+      "title": "闭包的提权漏洞",
+      "tags": ["frontend", "JavaScript", "Closure"],
+      "cover": "default-js.avif",
+      "description": "",
+      "date": "2023-9-14",
+      "name": "Auth-Bug-About-Closure"
     }
   ]
 }
