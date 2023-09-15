@@ -58,19 +58,23 @@ html.dark .theme-color-changer {
 }
 
 /* 媒体查询 */
-@media only screen and (min-width: 598px) {
+@media only screen and (min-width: 655px) {
     .menu-btn {
         display: none !important;
     }
 }
 
-@media only screen and (max-width: 598px) {
+@media only screen and (max-width: 655px) {
     .nav-link {
         display: none !important;
     }
 
     .nav-item h3 {
         font-size: 1.14rem !important;
+    }
+
+    .blob-title {
+        display: none !important;
     }
 }
 

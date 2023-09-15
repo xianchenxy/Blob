@@ -46,6 +46,13 @@ const title = ref('ZhangHuaqing\'s Blog\n');
 			<!-- sidebar 适用于窄屏幕 -->
 			<sideBar v-model="openDrawer" :title="title" :sideBarItem="NavItem"></sideBar>
 
+			<!-- Nav标题 -->
+			<el-col :span="8" class="blob-title nav-item">
+				<router-link to="/" class="theme-color-changer">
+					<span>{{ user.title }}</span>
+				</router-link>
+			</el-col>
+
 			<!-- 页面导航按钮 窄屏幕时消失 -->
 			<el-col :span="12" class="nav-link">
 				<router-link
