@@ -44,15 +44,7 @@ const title = ref('ZhangHuaqing\'s Blog\n');
 			</el-col>
 
 			<!-- sidebar 适用于窄屏幕 -->
-			<sideBar :openDrawer="openDrawer" :title="title" :sideBarItem="NavItem"
-					 @drawerClosed="openDrawer = false"></sideBar>
-
-			<!-- Nav标题 -->
-			<el-col :span="6" class="nav-item">
-				<router-link to="/" class="theme-color-changer">
-					<span>{{ user.title }}</span>
-				</router-link>
-			</el-col>
+			<sideBar v-model="openDrawer" :title="title" :sideBarItem="NavItem"></sideBar>
 
 			<!-- 页面导航按钮 窄屏幕时消失 -->
 			<el-col :span="12" class="nav-link">
@@ -67,7 +59,7 @@ const title = ref('ZhangHuaqing\'s Blog\n');
 				</router-link>
 			</el-col>
 			<!-- 主题切换组件 -->
-			<el-col :span="6" class="nav-item" style="flex-direction: row-reverse;">
+			<el-col :span="4" class="nav-item" style="flex-direction: row-reverse;">
 				<BackgroundMusic style="margin-right: 20px;"></BackgroundMusic>
 				<themeChanger style="margin-right: 20px"></themeChanger>
 			</el-col>

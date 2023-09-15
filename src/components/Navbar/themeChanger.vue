@@ -1,21 +1,26 @@
 <script lang="ts" setup>
-import {Sunny, Moon} from '@element-plus/icons-vue';
 import {useDark, useToggle} from '@vueuse/core';
-import {Ref, ref} from 'vue';
+import {appStore} from '@/stores';
+import {ref} from 'vue';
 
-const isDark = useDark();
-const toggleDark = useToggle(isDark);
+const store = appStore();
+const isDark = store.isDark;
+const toggleDark = useToggle(useDark());
 
-let theme: Ref<'dark' | 'light'> = ref('dark');
+let val = ref(isDark);
+
+function toggleTheme() {
+	toggleDark();
+	store.$patch((state: any) => {
+		state.isDark = val;
+	});
+}
 </script>
 
 <template>
-	<el-switch v-model="theme"
-			   size="large"
-			   :active-icon="Sunny"
-			   :inactive-icon="Moon"
-			   inline-prompt
-			   @click="toggleDark()"
+	<el-switch v-model="val" size="large" inline-prompt
+			   active-icon="Sunny" inactive-icon="Moon"
+			   @click="toggleTheme"
 	></el-switch>
 </template>
 

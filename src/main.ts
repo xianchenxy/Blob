@@ -1,4 +1,5 @@
 import {createApp} from 'vue';
+import {createPinia} from 'pinia';
 // markdown渲染样式
 import '../public/styles/vuepress-theme.css';
 // 响应式样式
@@ -33,5 +34,8 @@ app.directive('highlight', function (el) {
         hljs.highlightElement(elem);
     });
 });
+
+const pinia = createPinia()
+app.use(pinia)
 
 app.use(router).mount('#app');

@@ -3,18 +3,17 @@ import {PropType, ref} from 'vue';
 import {InavItem} from './types';
 
 const props = defineProps({
-    title: String,
-    openDrawer: Boolean,
-    sideBarItem: Array as PropType<InavItem[]>
+	title: String,
+	openDrawer: Boolean,
+	sideBarItem: Array as PropType<InavItem[]>
 });
-const emits = defineEmits(['drawerClosed']);
+const emits = defineEmits(['update:openDrawer']);
 
 // drawer
 const direction = ref('ttb');
 const size = ref('18%');
-// 关闭回调，将父组件的openDrawer控制变量重新置为false
-const closeHandler = (): void => {
-    emits('drawerClosed');
+const updateDrawerStatus = (status: any): void => {
+	emits('update:openDrawer', !!status);
 };
 
 // tabs
@@ -22,14 +21,14 @@ const tabs_activeName = ref('Home');
 </script>
 
 <template>
-	<el-drawer v-model="openDrawer"
+	<el-drawer :modelValue="openDrawer"
 			   :size="size"
 			   :direction="direction"
 			   :lock-scroll="false"
 			   :show-close="false"
 			   modal-class="drawer_modal"
-			   custom-class="drawer_body"
-			   @close="closeHandler()"
+			   class="drawer_body"
+			   @close="updateDrawerStatus"
 	>
 		<template #header>
 			<div style="text-align: center; height: 47px">
@@ -39,8 +38,7 @@ const tabs_activeName = ref('Home');
 
 		<el-tabs v-model="tabs_activeName">
 			<el-tab-pane v-for="item in sideBarItem"
-						 :key="item.name"
-						 :name="item.name"
+						 :name="item.name" :key="item.name"
 			>
 				<template #label>
 					<router-link :key="item.name" :to="item.url">
