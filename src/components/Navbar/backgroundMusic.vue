@@ -1,21 +1,31 @@
 <script setup lang="ts">
-import {ref} from 'vue';
+import {onMounted, ref} from 'vue';
 import {appStore} from '@/stores';
 
 let isPlay = ref(false);
 const store = appStore();
-const audio = ref(new Audio());
+
+interface CustomAudio extends HTMLAudioElement {
+}
+
+const audio = ref<CustomAudio | null>(null);
 
 function handleClick() {
 	if (isPlay.value) {
-		audio.value.pause();
+		audio.value!.pause();
 		isPlay.value = false;
 	} else {
-		audio.value.play();
-		audio.value.volume = 0.7;
+		audio.value!.play();
+		audio.value!.volume = 0.7;
 		isPlay.value = true;
 	}
 }
+
+onMounted(() => {
+	audio.value!.addEventListener('ended', () => {
+		isPlay.value = false;
+	});
+});
 
 </script>
 
@@ -23,7 +33,7 @@ function handleClick() {
 	<div style="font-size: 0;">
 		<svg v-if="store.isDark" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
 			 fill="#fff"
-			 :data-canPlay="isPlay"
+			 :class="{'playing': isPlay}"
 			 @click="handleClick">
 			<path d="M0 0h24v24H0z" fill="none" />
 			<path v-if="isPlay"
@@ -32,7 +42,7 @@ function handleClick() {
 				  d="M4.27 3L3 4.27l9 9v.28c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4v-1.73L19.73 21 21 19.73 4.27 3zM14 7h4V3h-6v5.18l2 2z" />
 		</svg>
 		<svg v-else xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000"
-			 :data-canPlay="isPlay"
+			 :class="{'playing': isPlay}"
 			 @click="handleClick">
 			<path d="M0 0h24v24H0z" fill="none" />
 			<path v-if="isPlay"
@@ -41,7 +51,7 @@ function handleClick() {
 				  d="M4.27 3L3 4.27l9 9v.28c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4v-1.73L19.73 21 21 19.73 4.27 3zM14 7h4V3h-6v5.18l2 2z" />
 		</svg>
 
-		<audio ref="audio" src="https://mp3.t57.cn:7087/kwlink_d.php?id=228908" autoplay></audio>
+		<audio ref="audio" src="/src/assets/audio/qingtian-8bit.m4a"></audio>
 	</div>
 </template>
 
@@ -64,7 +74,7 @@ function handleClick() {
 	}
 }
 
-svg[data-canPlay="true"] {
-	animation: audioPlay 1.4s linear;
+svg.playing {
+	animation: audioPlay 1.4s linear infinite;
 }
 </style>
