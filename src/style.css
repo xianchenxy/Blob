@@ -107,6 +107,7 @@ html.dark .theme-color-changer {
     --border-radius: 12px;
     --font-color: 44, 62, 80;
     --background-color: 255, 255, 255;
+    --background-color-sub-title: 30, 32, 35;
     --footer-color: 238, 242, 245;
     --link-color: 26, 92, 255;
 }
@@ -114,6 +115,7 @@ html.dark .theme-color-changer {
 html.dark {
     --font-color: 255, 255, 255;
     --background-color: 30, 32, 35;
+    --background-color-sub-title: 255, 255, 255;
     --footer-color: 20, 20, 20;
 }
 
@@ -152,4 +154,10 @@ html.dark .container .toc ul li:hover {
 html.dark .container .toc ul .toc-choosen {
     background-color: rgba(118, 118, 118, 0.2);
     color: #58a6ff;
+}
+
+/* 本站 svg仅用作icon */
+svg:hover {
+    fill: var(--el-color-primary-light-3);
+    cursor: pointer;
 }

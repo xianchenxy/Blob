@@ -15,7 +15,6 @@ const isShadow = ref('always');
 	<router-link :to="`/post/${post.name}`" class="card_container">
 		<el-card class="post_card"
 				 :class="{ move_down: isShadow === 'never' }"
-				 :shadow="isShadow"
 				 :body-style="{padding: '0px'}"
 				 @mouseover="isShadow = 'never'"
 				 @mouseout="isShadow = 'always'"
@@ -41,65 +40,65 @@ const isShadow = ref('always');
 
 <style scoped lang="scss">
 .card_container {
-  margin: 20px;
+	margin: 20px;
 
-  .post_card {
-    // width: 100%;
-    width: 350px;
-    height: 380px;
-    border: 0;
-    border-radius: var(--border-radius);
-    transition: all 0.3s;
-    position: relative;
+	.post_card {
+		// width: 100%;
+		width: 350px;
+		height: 380px;
+		border: 0;
+		border-radius: var(--border-radius);
+		transition: all 0.3s;
+		position: relative;
 
-    .cover_container {
-      height: 150px;
-      width: 100%;
-      font-size: 0;
-      border-radius: var(--border-radius);
-      overflow: hidden;
+		.cover_container {
+			height: 150px;
+			width: 100%;
+			font-size: 0;
+			border-radius: var(--border-radius);
+			overflow: hidden;
 
-      img {
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-        transition: all 0.3s;
-      }
-    }
+			img {
+				width: 100%;
+				height: 150px;
+				object-fit: cover;
+				transition: all 0.3s;
+			}
+		}
 
-    .post_info {
-      font-size: 0.85rem;
-      padding: 15px;
-      max-height: 150px;
-      overflow: hidden;
+		.post_info {
+			font-size: 0.85rem;
+			padding: 15px;
+			max-height: 150px;
+			overflow: hidden;
 
-      h3 {
-        font-size: 1.2rem;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
+			h3 {
+				font-size: 1.2rem;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
 
-      p {
-        margin-top: 5px;
-        opacity: 0.8;
+			p {
+				margin-top: 5px;
+				opacity: 0.8;
 
-        display: -webkit-box;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        -webkit-box-orient: vertical; //子元素应该被水平或垂直排列
-        -webkit-line-clamp: 3; //3行后显示省略号
-      }
+				display: -webkit-box;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				-webkit-box-orient: vertical; //子元素应该被水平或垂直排列
+				-webkit-line-clamp: 3; //3行后显示省略号
+			}
 
-      .tags {
-        position: absolute;
-        bottom: 20px;
+			.tags {
+				position: absolute;
+				bottom: 20px;
 
-        span {
-          font-weight: bold;
-          margin-right: 5px;
-        }
-      }
-    }
-  }
+				span {
+					font-weight: bold;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
 }
 </style>

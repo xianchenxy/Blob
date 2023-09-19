@@ -101,7 +101,6 @@ const title = ref('ZhangHuaqing\'s Blog\n');
 
 	.nav-link {
 		display: flex;
-		justify-content: center;
 		align-items: center;
 
 		.link-item {
