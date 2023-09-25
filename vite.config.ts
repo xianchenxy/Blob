@@ -11,6 +11,7 @@ import viteCompression from 'vite-plugin-compression';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+    base: 'Blob',
     server: {
         open: true
     },
@@ -42,8 +43,8 @@ export default defineConfig({
             '@DataConfig': path.resolve(__dirname, './DataConfig')
         }
     },
-
     build: {
+        outDir: 'docs',
         rollupOptions: {
             output: {
                 // 梳理分流原dist/assets目录
