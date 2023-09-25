@@ -14,11 +14,11 @@ provide('scrollTop', curScrollTop);
 
 // 监听滚动事件，
 function onScroll({scrollTop}: { scrollTop: number }): void {
-    // 向navbar传递阴影控制参数
-    pageScrolled.value = !!scrollTop;
-    // provide响应式滚动高度
-    curScrollTop.value = scrollTop;
-    // console.log(curScrollTop.value);
+	// 向navbar传递阴影控制参数
+	pageScrolled.value = !!scrollTop;
+	// provide响应式滚动高度
+	curScrollTop.value = scrollTop;
+	// console.log(curScrollTop.value);
 }
 </script>
 
@@ -38,15 +38,15 @@ function onScroll({scrollTop}: { scrollTop: number }): void {
 			</div>
 
 			<!-- footer -->
-			<Footer class="footer" />
+			<!--			<Footer class="footer" />-->
 		</el-scrollbar>
 	</div>
 </template>
 
 <style scoped lang="scss">
 .container {
-  .main {
-    min-height: calc(100vh - 64px);
-  }
+	.main {
+		min-height: calc(100vh - 64px);
+	}
 }
 </style>

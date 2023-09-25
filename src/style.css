@@ -161,3 +161,7 @@ svg:hover {
     fill: var(--el-color-primary-light-3);
     cursor: pointer;
 }
+
+main {
+    padding-bottom: 40px;
+}

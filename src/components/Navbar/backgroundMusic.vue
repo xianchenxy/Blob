@@ -8,7 +8,7 @@ const store = appStore();
 interface CustomAudio extends HTMLAudioElement {
 }
 
-const audioFile = '../../../public/audio/FreeLoop.mp3';
+import audioFile from '../../../public/audio/FreeLoop.mp3';
 const audio = ref<CustomAudio | null>(null);
 
 function handleClick() {

@@ -15,7 +15,7 @@ const isShadow = ref('always');
 	<router-link :to="`/post/${post.name}`" class="card_container">
 		<el-card class="post_card"
 				 :class="{ move_down: isShadow === 'never' }"
-				 :body-style="{padding: '0px'}"
+				 :body-style="{padding: 0}"
 				 @mouseover="isShadow = 'never'"
 				 @mouseout="isShadow = 'always'"
 		>

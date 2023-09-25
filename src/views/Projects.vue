@@ -33,19 +33,17 @@ p {
 }
 
 main {
-	* {
-		margin-bottom: 30px;
-	}
-
-	row-gap: 50px;
-	column-gap: 40px;
 	padding: 0 28px;
 	max-width: 1512px;
-	margin: 100px auto;
+	margin: 0 auto;
 	min-height: 65vh;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
+
+	* {
+		margin: 60px 0;
+	}
 
 	.fake-card {
 		// 规格和真盒子一样

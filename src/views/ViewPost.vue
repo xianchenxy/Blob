@@ -10,17 +10,26 @@ const postName = route.params.postName as string;
 const post = ref<String>('');
 const postCover = ref<string>('');
 
+
 try {
-    // 动态导入md，异步导出html
-    const {html} = await import(`../../posts/post/${postName}.md`);
-    post.value = html;
-    const {cover} = posts.filter(post => post.name === postName)[0];
-    postCover.value = cover;
+	// 1.获取全部 post 位置
+	const globs = import.meta.glob(`../../posts/post/**/*.md`);
+	// 2. 定位 post 所在位置
+	const reg = new RegExp(`\.\./\.\./posts/post/((.*?)?${postName})\.md$`);
+	let path = Object.keys(globs).find(path => reg.test(path));
+	path = path ? path.match(reg)![1] : postName;
+	// 3.拼接完整路径
+	const fullPath = `../../posts/post/${path}.md`;
+	// 动态导入md，异步导出html
+	const {html} = await import(fullPath);
+	post.value = html;
+	const {cover} = posts.filter(post => post.name === postName)[0];
+	postCover.value = cover;
 } catch (e) {
-    // if postName不存在，跳转404
-    console.error('postName不存在，跳转404', e);
-    console.debug('posts: ', post, 'postName: ', postName);
-    router.push('/404');
+	// if postName不存在，跳转404
+	console.error('postName不存在，跳转404', e);
+	console.debug('posts: ', post, 'postName: ', postName);
+	router.push('/404');
 }
 
 // 获取图片的动态路径
@@ -42,24 +51,24 @@ const getSrc = (name: string) => new URL(`../../posts/assets/${name}`, import.me
 
 <style scoped lang="scss">
 .container {
-  .cover,
-  .post-body {
-    max-width: 805px;
-    margin: 0 auto;
-  }
+	.cover,
+	.post-body {
+		max-width: 805px;
+		margin: 0 auto;
+	}
 
-  .cover {
-    border-radius: 10px;
-    overflow: hidden;
-    height: 400px;
+	.cover {
+		border-radius: 10px;
+		overflow: hidden;
+		height: 400px;
 
-    img {
-      // img是行内元素，是不能直接设置宽高的
-      display: block;
-      width: 100%;
-      height: 100%;
-      // object-fit: cover;
-    }
-  }
+		img {
+			// img是行内元素，是不能直接设置宽高的
+			display: block;
+			width: 100%;
+			height: 100%;
+			// object-fit: cover;
+		}
+	}
 }
 </style>

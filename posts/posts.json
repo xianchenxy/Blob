@@ -1,14 +1,6 @@
 {
   "posts": [
     {
-      "title": "InkBlogger: 为所有人建筑的简约博客",
-      "tags": ["Vue.js", "project", "frontend"],
-      "cover": "default-vue.png",
-      "description": "最深的记忆不如最浅的墨水，使用InkBlogger记录和分享你的技术与生活。",
-      "date": "2022-10-6",
-      "name": "InkBlogger"
-    },
-    {
       "title": "手写节流与防抖？生动展示装饰器原理与实践",
       "tags": ["frontend", "JavaScript"],
       "cover": "default-js.avif",

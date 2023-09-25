@@ -41,7 +41,7 @@ const tabs_activeName = ref('Home');
 						 :name="item.name" :key="item.name"
 			>
 				<template #label>
-					<router-link :key="item.name" :to="item.url">
+					<router-link :key="item.name" :to="item.url" @click.prevent>
 						<span style="font-size: 0.95rem; font-weight: 700; user-select: none">{{ item.name }}</span>
 					</router-link>
 				</template>
@@ -50,4 +50,9 @@ const tabs_activeName = ref('Home');
 	</el-drawer>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+a {
+	height: 100%;
+	line-height: 40px;
+}
+</style>

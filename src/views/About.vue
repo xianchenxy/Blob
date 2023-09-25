@@ -6,7 +6,7 @@ const {html: about} = await import('@DataConfig/aboutMe.md');
 
 <template>
 	<h1 style="font-size: 200%; text-align: center">About Me</h1>
-	<p>Who am I and What am I doing now</p>
+	<p>Who am I</p>
 	<el-divider />
 	<main>
 		<div class="about center">
@@ -58,6 +58,7 @@ p {
 
 	.gridContainer {
 		max-width: calc(100vw - 0.5rem * 2);
+		justify-content: center;
 	}
 
 	.contactItem {
@@ -68,11 +69,16 @@ p {
 		box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
 		border-radius: 20px;
 		cursor: pointer;
-		padding: 15px 0;
+		padding: 15px;
 		transition: all 0.25s ease;
+		word-wrap: break-word;
 
 		&:hover {
 			transform: scale(1.05);
+		}
+
+		p {
+			font-size: 14px;
 		}
 
 		* {
