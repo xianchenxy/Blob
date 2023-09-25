@@ -70,8 +70,7 @@ const themeVar = computed(() => store.isDark ? 'var(--el-color-white)' : 'var(--
 
 			<el-tooltip>
 				<template #content>
-					<p style="font-size: 18px;font-weight:bold;line-height: 1.5;margin-bottom: 12px;">project online
-						website</p>
+					<p style="font-size: 18px;font-weight:bold;line-height: 1.5;margin-bottom: 12px;">project online website</p>
 					<ul style="font-size: 14px;">
 						<li v-for="(link, index) in renderLink" style="text-indent: 2em" :key="index">
 							{{ renderLinkPrefixText[index] }}
