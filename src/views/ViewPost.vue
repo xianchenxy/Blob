@@ -14,14 +14,16 @@ const postCover = ref<string>('');
 try {
 	// 1.获取全部 post 位置
 	const globs = import.meta.glob(`../../posts/post/**/*.md`);
-	// 2. 定位 post 所在位置
 	const reg = new RegExp(`\.\./\.\./posts/post/((.*?)?${postName})\.md$`);
-	let path = Object.keys(globs).find(path => reg.test(path));
-	path = path ? path.match(reg)![1] : postName;
-	// 3.拼接完整路径
-	const fullPath = `../../posts/post/${path}.md`;
+	let mdFileFn = null;
+	for (let path in globs) {
+		if (globs.hasOwnProperty(path) && reg.test(path)) {
+			// 2. 获取到 post 的懒加载函数
+			mdFileFn = globs[path];
+		}
+	}
 	// 动态导入md，异步导出html
-	const {html} = await import(fullPath);
+	const {html} = await mdFileFn!();
 	post.value = html;
 	const {cover} = posts.filter(post => post.name === postName)[0];
 	postCover.value = cover;
