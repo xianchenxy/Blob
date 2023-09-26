@@ -1,0 +1,4 @@
+import"./vue-126afe2a.js";import{o as r,c as o,S as i,a as t,a3 as n}from"./@vue-268a4df7.js";const a="/Blog/static/png/warning-a7ef4e41.png",d={},_=`<p>error stack: <img src="./image/warning.png" alt="error message"></p>
+<p>same error issues: https://github.com/vitejs/vite/issues/5558</p>
+<p>link: https://github.com/rollup/plugins/tree/master/packages/dynamic-import-vars#limitations</p>
+`,m=t("p",null,[n("error stack: "),t("img",{src:a,alt:"error message"})],-1),p=t("p",null,"same error issues: https://github.com/vitejs/vite/issues/5558",-1),c=t("p",null,"link: https://github.com/rollup/plugins/tree/master/packages/dynamic-import-vars#limitations",-1);function s(e,u){return r(),o(i,null,[m,p,c],64)}const l={render:s};l.__hmrId="/Users/xianchenxy/Documents/Blog/posts/post/DymaticImportProblemInVite/dymatic-import-problem-in-vite.md";const k=e=>({components:e,render:s});export{l as VueComponent,k as VueComponentWith,d as attributes,_ as html};

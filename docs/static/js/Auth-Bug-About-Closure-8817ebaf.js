@@ -1,4 +1,4 @@
-import"./vue-126afe2a.js";import{o as c,c as r,S as s,a as t,a3 as e}from"./@vue-268a4df7.js";const f={},g=`<p>// Q: How to modify the <code>obj</code> without modifying the source code?</p>
+import"./vue-126afe2a.js";import{o as c,c as r,S as s,a as t,a3 as e}from"./@vue-268a4df7.js";const g={},f=`<p>// Q: How to modify the <code>obj</code> without modifying the source code?</p>
 <pre><code class="language-js">const o = (function () {
 	const obj = {
 		a: 1,
@@ -34,4 +34,4 @@ Object.defineProperty(Object.prototype, 'abc', {
 		return this;
 	}
 });
-`)],-1);function o(n,l){return c(),r(s,null,[u,d,p,a],64)}const i={render:o};i.__hmrId="/Users/xianchenxy/Documents/Blob/posts/post/Auth-Bug-About-Closure.md";const j=n=>({components:n,render:o});export{i as VueComponent,j as VueComponentWith,f as attributes,g as html};
+`)],-1);function o(n,l){return c(),r(s,null,[u,d,p,a],64)}const i={render:o};i.__hmrId="/Users/xianchenxy/Documents/Blog/posts/post/Auth-Bug-About-Closure.md";const j=n=>({components:n,render:o});export{i as VueComponent,j as VueComponentWith,g as attributes,f as html};

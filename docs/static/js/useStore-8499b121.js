@@ -125,4 +125,4 @@ export default createStore({
   // \u76F4\u63A5\u901A\u8FC7key\u83B7\u53D6\u901A\u8FC7provide\u4FDD\u5B58\u7684store\u5BF9\u8C61
   return inject(key !== null ? key : storeKey)
 }
-`)],-1),k=e("p",null,[o("\u8FD9\u4E5F\u89E3\u91CA\u4E86\u4E3A\u4F55\u6211\u4EEC\u5728hooks\u4E2D\u4F7F\u7528"),e("code",null,"useStore"),o("\u65F6\u4F1A\u62A5"),e("code",null,"inject"),o("\u8B66\u544A")],-1);function s(n,w){return r(),c(p,null,[d,i,a,u,l,m,g,h,S,_,v,y,f,x,T,k],64)}const q={render:s};q.__hmrId="/Users/xianchenxy/Documents/Blob/posts/post/useStore/useStore.md";const D=n=>({components:n,render:s});export{q as VueComponent,D as VueComponentWith,V as attributes,b as html};
+`)],-1),k=e("p",null,[o("\u8FD9\u4E5F\u89E3\u91CA\u4E86\u4E3A\u4F55\u6211\u4EEC\u5728hooks\u4E2D\u4F7F\u7528"),e("code",null,"useStore"),o("\u65F6\u4F1A\u62A5"),e("code",null,"inject"),o("\u8B66\u544A")],-1);function s(n,w){return r(),c(p,null,[d,i,a,u,l,m,g,h,S,_,v,y,f,x,T,k],64)}const q={render:s};q.__hmrId="/Users/xianchenxy/Documents/Blog/posts/post/useStore/useStore.md";const D=n=>({components:n,render:s});export{q as VueComponent,D as VueComponentWith,V as attributes,b as html};
