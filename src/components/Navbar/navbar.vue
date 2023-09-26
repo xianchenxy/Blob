@@ -47,7 +47,7 @@ const title = ref('ZhangHuaqing\'s Blog\n');
 			<sideBar v-model="openDrawer" :title="title" :sideBarItem="NavItem"></sideBar>
 
 			<!-- Nav标题 -->
-			<el-col :span="8" class="blob-title nav-item">
+			<el-col :span="8" class="blog-title nav-item">
 				<router-link to="/" class="theme-color-changer">
 					<span>{{ user.title }}</span>
 				</router-link>
