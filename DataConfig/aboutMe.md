@@ -6,4 +6,4 @@
 - 🌱 Over the years, I've honed my skills in developing **pixel-perfect** and **responsive** websites.
 - 👀 I’m interested in ⌨️ coding | 🧑‍🍳 cooking | 🏸 badminton and so on...
 - 🙇🏻 I'm always excited to stay updated with the **latest trends** and best practices in web development.
-- <img src="../public/image/expect.png" width="60"/> If you are interested in my blog or project, feel free to contact me through the contact details below, welcome to discuss great and interesting front-end technologies.
+- ✨ If you are interested in my blog or project, feel free to contact me through the contact details below, welcome to discuss great and interesting front-end technologies.
