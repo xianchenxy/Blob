@@ -1,4 +1,4 @@
-import"./vue-126afe2a.js";import{o,c as s,S as c,a as n}from"./@vue-268a4df7.js";const f={},R=`<h1>1.\u57FA\u7840\u8BA4\u8BC6</h1>
+import"./vue-126afe2a.js";import{o,c as s,S as c,a as n}from"./@vue-268a4df7.js";const f={},k=`<h1>1.\u57FA\u7840\u8BA4\u8BC6</h1>
 <p>Reflect\uFF08\u53CD\u5C04\uFF09\uFF1A\u672C\u8D28\u662F\u8C03\u7528\u5BF9\u8C61\u7684\u57FA\u672C\u65B9\u6CD5\u3002
 \u57FA\u672C\u65B9\u6CD5\uFF1Amdn link
 ES6\u65B0\u589E\u7684\uFF0C\u5F00\u653E\u4E86\u5BF9\u5916\u66B4\u9732\u7684\uFF0C\u5BF9\u8C61\u4E0A\u7684\u57FA\u672C\u65B9\u6CD5\u3002
@@ -39,4 +39,4 @@ obj.a = 3;
 };
 
 console.log(obj.c); // 3
-`)],-1),i=n("p",null,"\u7565...\u89C1\u6296\u97F3TC\u76EE\u5F55",-1);function t(e,g){return o(),s(c,null,[l,a,r,p,u,d,h,_,i],64)}const b={render:t};b.__hmrId="/Users/xianchenxy/Documents/Blog/posts/post/What's_Reflect/What's_Reflect.md";const k=e=>({components:e,render:t});export{b as VueComponent,k as VueComponentWith,f as attributes,R as html};
+`)],-1),i=n("p",null,"\u7565...\u89C1\u6296\u97F3TC\u76EE\u5F55",-1);function t(e,g){return o(),s(c,null,[l,a,r,p,u,d,h,_,i],64)}const b={render:t};b.__hmrId="/Users/xianchenxy/Documents/Blog/posts/post/what's_reflect/what's_reflect.md";const R=e=>({components:e,render:t});export{b as VueComponent,R as VueComponentWith,f as attributes,k as html};

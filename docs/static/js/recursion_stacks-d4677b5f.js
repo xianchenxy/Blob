@@ -54,4 +54,4 @@ import"./vue-126afe2a.js";import{o as i,c as o,S as p,b as s,a as n}from"./@vue-
     }
   }
 };
-`)],-1),l=n("p",null,[n("img",{src:"https://i.ibb.co/D1VVQ11/image-ST3-C6lmz-Wz.png",alt:""})],-1);function e(t,h){return i(),o(p,null,[c,a,l],64)}const r={render:e};r.__hmrId="/Users/xianchenxy/Documents/Blog/posts/post/Recursion_stacks/Recursion_stacks.md";const m=t=>({components:t,render:e});export{r as VueComponent,m as VueComponentWith,d as attributes,x as html};
+`)],-1),l=n("p",null,[n("img",{src:"https://i.ibb.co/D1VVQ11/image-ST3-C6lmz-Wz.png",alt:""})],-1);function e(t,h){return i(),o(p,null,[c,a,l],64)}const r={render:e};r.__hmrId="/Users/xianchenxy/Documents/Blog/posts/post/recursion_stacks/recursion_stacks.md";const m=t=>({components:t,render:e});export{r as VueComponent,m as VueComponentWith,d as attributes,x as html};

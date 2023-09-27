@@ -28,10 +28,10 @@ Object.defineProperty(Object.prototype, 'abc', {
 		return obj[k];
 	};
 })();
-`)],-1),p=t("p",null,[e("// A: Using the "),t("code",null,"prototype"),e(" and "),t("code",null,"Object.defineProperty"),e(", See")],-1),a=t("pre",null,[t("code",{class:"language-js","v-pre":"true"},`
+`)],-1),a=t("p",null,[e("// A: Using the "),t("code",null,"prototype"),e(" and "),t("code",null,"Object.defineProperty"),e(", See")],-1),p=t("pre",null,[t("code",{class:"language-js","v-pre":"true"},`
 Object.defineProperty(Object.prototype, 'abc', {
 	get: function() {
 		return this;
 	}
 });
-`)],-1);function o(n,l){return c(),r(s,null,[u,d,p,a],64)}const i={render:o};i.__hmrId="/Users/xianchenxy/Documents/Blog/posts/post/Auth-Bug-About-Closure.md";const j=n=>({components:n,render:o});export{i as VueComponent,j as VueComponentWith,g as attributes,f as html};
+`)],-1);function o(n,l){return c(),r(s,null,[u,d,a,p],64)}const i={render:o};i.__hmrId="/Users/xianchenxy/Documents/Blog/posts/post/auth_bug_about_closure.md";const j=n=>({components:n,render:o});export{i as VueComponent,j as VueComponentWith,g as attributes,f as html};
