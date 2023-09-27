@@ -11,7 +11,7 @@ import viteCompression from 'vite-plugin-compression';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    base: 'Blog',
+    base: '/Blog/',
     server: {
         open: true
     },
