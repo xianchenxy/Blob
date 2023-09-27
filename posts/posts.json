@@ -6,7 +6,7 @@
       "cover": "default-js.avif",
       "description": "光会默写还不够，理解原理及其背后的设计模式才能举一反三哦。",
       "date": "2022-10-10",
-      "name": "Decorators"
+      "name": "decorators"
     },
     {
       "title": "你是否想过，字符串没有属性，为什么可以像对象一样调用",
@@ -14,7 +14,7 @@
       "cover": "default-js.avif",
       "description": "",
       "date": "2022-10-10",
-      "name": "String"
+      "name": "string"
     },
     {
       "title": "面试题手写bind，原来没有我想得那么简单",
@@ -30,7 +30,7 @@
       "cover": "vuex.jpg",
       "description": "",
       "date": "2022-10-10",
-      "name": "useStore"
+      "name": "use_store"
     },
     {
       "title": "还在用typeof、instanceof？是时候给你的类型检查升个级了",
@@ -38,7 +38,7 @@
       "cover": "default-js.avif",
       "description": "",
       "date": "2022-10-10",
-      "name": "typeCheck"
+      "name": "type_check"
     },
     {
       "title": "函数绑定func.bind",
@@ -46,7 +46,7 @@
       "cover": "default-js.avif",
       "description": "",
       "date": "2022-10-10",
-      "name": "funcBind"
+      "name": "func_bind"
     },
     {
       "title": "函数原来是个对象",
@@ -54,7 +54,7 @@
       "cover": "default-js.avif",
       "description": "",
       "date": "2022-10-10",
-      "name": "funcObject"
+      "name": "func_object"
     },
     {
       "title": "调度程序：setTimeout与setInterval",
@@ -70,7 +70,7 @@
       "cover": "default-js.avif",
       "description": "",
       "date": "2022-10-10",
-      "name": "Variable_Scope_and_Closures"
+      "name": "variable_scope_and_closures"
     },
     {
       "title": "递归和堆桟",
@@ -78,7 +78,7 @@
       "cover": "default-js.avif",
       "description": "",
       "date": "2022-10-10",
-      "name": "Recursion_stacks"
+      "name": "recursion_stacks"
     },
     {
       "title": "闭包的提权漏洞",
@@ -86,7 +86,7 @@
       "cover": "default-js.avif",
       "description": "",
       "date": "2023-9-14",
-      "name": "Auth-Bug-About-Closure"
+      "name": "auth_bug_about_closure"
     }
   ]
 }
