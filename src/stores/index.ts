@@ -7,5 +7,12 @@ export const appStore = defineStore({
         return {
             isDark: useDark()
         };
+    },
+    getters: {
+        getPostCoverSrc() {
+            return (name: string = 'default-vue.png'): string => {
+                return /^https?:/.test(name) ? name : new URL(`../../posts/assets/${name}`, import.meta.url).href;
+            };
+        }
     }
 });

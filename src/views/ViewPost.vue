@@ -3,23 +3,26 @@ import {ref} from 'vue';
 import {useRoute, useRouter} from 'vue-router';
 import {posts} from '@posts/posts.json';
 import Toc from '../components/Toc/index.vue';
+import {appStore} from '@/stores';
 
+const store = appStore();
 const route = useRoute();
 const router = useRouter();
 const postName = route.params.postName as string;
 const post = ref<String>('');
 const postCover = ref<string>('');
 
-
+let mdFileFn = null;
+let globs = null;
 try {
 	// 1.获取全部 post 位置
-	const globs = import.meta.glob(`../../posts/post/**/*.md`);
+	globs = import.meta.glob(`../../posts/post/**/*.md`);
 	const reg = new RegExp(`\.\./\.\./posts/post/((.*?)?${postName})\.md$`);
-	let mdFileFn = null;
 	for (let path in globs) {
 		if (globs.hasOwnProperty(path) && reg.test(path)) {
 			// 2. 获取到 post 的懒加载函数
 			mdFileFn = globs[path];
+			break;
 		}
 	}
 	// 动态导入md，异步导出html
@@ -30,19 +33,16 @@ try {
 } catch (e) {
 	// if postName不存在，跳转404
 	console.error('postName不存在，跳转404', e);
-	console.debug('posts: ', post, 'postName: ', postName);
-	router.push('/404');
+	console.debug('posts: ', post, 'postName: ', postName, 'mdFileFn', mdFileFn, 'globs', globs);
+	// router.push('/404');
 }
-
-// 获取图片的动态路径
-const getSrc = (name: string) => new URL(`../../posts/assets/${name}`, import.meta.url).href;
 </script>
 
 <template>
 	<div class="container">
 		<!-- 作者信息介绍 -->
 		<div class="cover">
-			<img :src="getSrc(postCover)" alt="cover" />
+			<img :src="store.getPostCoverSrc(postCover)" alt="cover" />
 		</div>
 		<!-- 异步组件 -->
 		<div class="post-body vuepress-markdown-body" v-html="post" v-highlight></div>

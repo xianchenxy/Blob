@@ -1,13 +1,12 @@
 <script lang="ts" setup>
 import {ref} from 'vue';
 import {Ipost} from './types';
+import {appStore} from '@/stores';
 
 // 使用泛型参数时，defineProps内部不再接收参数，编译器会自动编译为required
 const props = defineProps<{ post: Ipost }>();
 
-// 获取图片的动态路径
-const getSrc = (name: string) => new URL(`../../../posts/assets/${name}`, import.meta.url).href;
-
+const store = appStore();
 const isShadow = ref('always');
 </script>
 
@@ -22,16 +21,16 @@ const isShadow = ref('always');
 			<!-- post封面 -->
 			<div class="cover_container">
 				<img :class="{ scale_up: isShadow === 'never' }"
-					 :src="getSrc(post.cover) || '../../assets/post/default-vue.png'"
+					 :src="store.getPostCoverSrc(post.cover)"
 				/>
 			</div>
 			<!-- post信息 -->
 			<div class="post_info">
 				<h3>{{ post.title }}</h3>
-				<span>{{ post.date }}</span>
-				<p>{{ post.description }}</p>
-				<div class="tags">
-					<span v-for="tag in post.tags" :key="tag">{{ tag }}</span>
+				<time v-if="post.date">{{ post.date }}</time>
+				<p v-if="post.description">{{ post.description }}</p>
+				<div v-if="post.tags.length > 0" class="tags">
+					<span v-for="tag in post.tags" :key="tag" :data-content="tag">{{ tag }}</span>
 				</div>
 			</div>
 		</el-card>
@@ -43,8 +42,7 @@ const isShadow = ref('always');
 	margin: 20px;
 
 	.post_card {
-		// width: 100%;
-		width: 350px;
+		width: 380px;
 		height: 380px;
 		border: 0;
 		border-radius: var(--border-radius);
@@ -95,7 +93,28 @@ const isShadow = ref('always');
 
 				span {
 					font-weight: bold;
-					margin-right: 5px;
+					margin-right: 6px;
+					padding: 2px 8px;
+					border-radius: 4px;
+					background-color: var(--el-color-danger-light-7);
+				}
+
+				span:nth-child(4n),
+				span[data-content="css" i] {
+					background-color: var(--el-color-primary-light-7);
+				}
+
+				span[data-content="vue" i] {
+					background-color: var(--el-color-success-light-7);
+				}
+
+				span[data-content="js" i],
+				span[data-content="JavaScript" i] {
+					background-color: var(--el-color-warning-light-7);
+				}
+
+				span[data-content="vite" i] {
+					background-color: #c88dff;
 				}
 			}
 		}
