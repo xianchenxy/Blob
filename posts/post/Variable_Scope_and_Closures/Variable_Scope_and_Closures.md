@@ -62,11 +62,11 @@ sayHi();
     2.  对 **外部词法环境** 的引用，与外部代码相关联。
     所有的函数在“诞生”时都会记住创建它们的[词法环境](https://zh.javascript.info/closure#ci-fa-huan-jing "词法环境")。从技术上讲，这里没有什么魔法：所有函数都有名为 `[[Environment]]` 的隐藏属性，该属性保存了对创建该函数的词法环境的引用。
 
-    ![](image/image_AFOknZi-3s.png)
+    ![img](https://i.ibb.co/rGzzvyB/image-AFOkn-Zi-3s.png)
     ***
     词法环境对变量的初始化
 
-    ![](image/image_fzzqFsp9Dx.png)
+    ![img](https://i.ibb.co/CwFtyTF/image-fzzq-Fsp9-Dx.png)
 
     这里有陷阱，示例
     ```javascript

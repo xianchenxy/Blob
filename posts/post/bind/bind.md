@@ -54,7 +54,7 @@ Function.prototype.myBind = function(context) {
 
 遇事不觉，[MDN里学！](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind#%E4%BD%9C%E4%B8%BA%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8%E7%9A%84%E7%BB%91%E5%AE%9A%E5%87%BD%E6%95%B0 "MDN里学！")
 
-![](image/image_mkkFnX67dR.png)
+![img](https://i.ibb.co/2YDYHvJ/image-mkk-Fn-X67d-R.png)
 
 哦哦！是new，当我们用new调用绑定函数时...我自己也有点迷糊了w(ﾟДﾟ)w
 

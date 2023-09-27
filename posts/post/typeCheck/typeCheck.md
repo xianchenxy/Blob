@@ -196,7 +196,7 @@ console.log({}.toString.call(user)); // [object 用于存储用户信息的对�
 
 ## 总结
 
-![](image/image_VadAkzq8gf.png)
+![img](https://i.ibb.co/xC6mcN5/image-Vad-Akzq8gf.png)
 
 现在，我们手头上就有了个“磕了药似的 typeof”，不仅能检查原始数据类型，而且适用于内建对象，更可贵的是还支持自定义。
 

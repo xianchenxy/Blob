@@ -30,13 +30,13 @@ import { Store, useStore } from "vuex";
 
 ## Error
 
-![](image/image_JbaXF9C3JB.png)
+![img](https://i.ibb.co/Kh9pH6T/image-Jba-XF9-C3-JB.png)
 
 很明显，此处的`store`获取失败
 
 且warn提示`useStore`只能使用在`setup()`中，无语，该hooks正是引入组件`setup`中
 
-![](image/image_dfIMbwU1AP.png)
+![img](https://i.ibb.co/C0Rd600/image-df-IMbw-U1-AP.png)
 
 ## Solution
 
@@ -92,7 +92,7 @@ export const store = createStore(...)
 
 warn和error消失
 
-![](image/image_1STSBYgtrs.png)
+![img](https://i.ibb.co/R6YhXWh/image-1-STSBYgtrs.png)
 
 ## 问题溯源
 
