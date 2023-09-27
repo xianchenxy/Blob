@@ -113,6 +113,10 @@ const isShadow = ref('always');
 					background-color: var(--el-color-warning-light-7);
 				}
 
+				span[data-content="design pattern" i]  {
+					background-color: #3997ab;
+				}
+
 				span[data-content="vite" i] {
 					background-color: #c88dff;
 				}

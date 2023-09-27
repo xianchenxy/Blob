@@ -1,17 +1,24 @@
 {
   "posts": [
     {
+      "title": "【设计模式】02-策略模式",
+      "tags": ["frontend", "JavaScript", "Design Pattern"],
+      "cover": "https://i.ibb.co/ts4HJfL/strategy-pattern.png",
+      "description": "中央集权制度",
+      "date": "2021-07-15 21:20:01",
+      "name": "strategy_pattern"
+    },
+    {
       "title": "【设计模式】01-单例模式",
-      "tags": ["frontend", "JavaScript", "Design Patterns"],
-      "cover": "https://i.ibb.co/Kzbn3HZ/singleton-pattern-introduction.png",
-      "description": "光会默写还不够，理解原理及其背后的设计模式才能举一反三哦。",
+      "tags": ["frontend", "JavaScript", "Design Pattern"],
+      "cover": "https://i.ibb.co/cg80J1P/singleton-pattern.png",
+      "description": "单实例、全局访问",
       "date": "2021-07-15 21:14:14",
       "name": "singleton_pattern"
     },
     {
       "title": "手写节流与防抖？生动展示装饰器原理与实践",
       "tags": ["frontend", "JavaScript"],
-      "cover": "default-js.avif",
       "description": "光会默写还不够，理解原理及其背后的设计模式才能举一反三哦。",
       "date": "2022-10-10",
       "name": "decorators"
@@ -19,7 +26,6 @@
     {
       "title": "你是否想过，字符串没有属性，为什么可以像对象一样调用",
       "tags": ["frontend", "JavaScript"],
-      "cover": "default-js.avif",
       "description": "",
       "date": "2022-10-10",
       "name": "string"
@@ -27,7 +33,6 @@
     {
       "title": "【面试题】手写bind，原来没有我想得那么简单",
       "tags": ["frontend", "JavaScript"],
-      "cover": "default-js.avif",
       "description": "",
       "date": "2022-10-10",
       "name": "bind"
@@ -43,7 +48,6 @@
     {
       "title": "还在用typeof、instanceof？是时候给你的类型检查升个级了",
       "tags": ["frontend", "JavaScript"],
-      "cover": "default-js.avif",
       "description": "",
       "date": "2022-10-10",
       "name": "type_check"
@@ -51,7 +55,6 @@
     {
       "title": "函数绑定func.bind",
       "tags": ["frontend", "JavaScript"],
-      "cover": "default-js.avif",
       "description": "",
       "date": "2022-10-10",
       "name": "func_bind"
@@ -59,7 +62,6 @@
     {
       "title": "函数原来是个对象",
       "tags": ["frontend", "JavaScript"],
-      "cover": "default-js.avif",
       "description": "",
       "date": "2022-10-10",
       "name": "func_object"
@@ -67,7 +69,6 @@
     {
       "title": "调度程序：setTimeout与setInterval",
       "tags": ["frontend", "JavaScript"],
-      "cover": "default-js.avif",
       "description": "",
       "date": "2022-10-10",
       "name": "setTimeout_setInterval"
@@ -75,7 +76,6 @@
     {
       "title": "变量作用域与闭包",
       "tags": ["frontend", "JavaScript"],
-      "cover": "default-js.avif",
       "description": "",
       "date": "2022-10-10",
       "name": "variable_scope_and_closures"
@@ -83,7 +83,6 @@
     {
       "title": "递归和堆桟",
       "tags": ["frontend", "JavaScript"],
-      "cover": "default-js.avif",
       "description": "",
       "date": "2022-10-10",
       "name": "recursion_stacks"
@@ -91,7 +90,6 @@
     {
       "title": "闭包的提权漏洞",
       "tags": ["frontend", "JavaScript", "Closure"],
-      "cover": "default-js.avif",
       "description": "",
       "date": "2023-9-14",
       "name": "auth_bug_about_closure"
