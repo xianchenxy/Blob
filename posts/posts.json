@@ -93,6 +93,15 @@
       "description": "",
       "date": "2023-9-14",
       "name": "auth_bug_about_closure"
+    },
+    {
+      "title": "webpack中多页应用的打包配置",
+      "tags": ["frontend", "JavaScript", "Webpack"],
+      "description": "多入口",
+      "date": "2023-10-5 23:36:30",
+      "cover": "webpack.svg",
+      "name": "webpack_build_multiple_pages_app",
+      "style": "object-fit: contain;"
     }
   ]
 }

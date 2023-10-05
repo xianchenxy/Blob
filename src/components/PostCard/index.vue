@@ -25,6 +25,7 @@ function handleError(ev: Event) {
 			<!-- post封面 -->
 			<div class="cover_container">
 				<img :class="{ scale_up: isShadow === 'never' }"
+					 :style="post.style"
 					 :src="store.getPostCoverSrc(post.cover)"
 					 :onerror="handleError"
 				/>
@@ -118,7 +119,7 @@ function handleError(ev: Event) {
 					background-color: var(--el-color-warning-light-7);
 				}
 
-				span[data-content="design pattern" i]  {
+				span[data-content="design pattern" i] {
 					background-color: #3997ab;
 				}
 
