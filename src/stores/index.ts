@@ -12,7 +12,7 @@ export const appStore = defineStore({
         getPostCoverSrc() {
             return (name?: string | undefined | ''): string => {
                 name = name || 'default-js.avif';
-                return /^https?:/.test(name) ? name : new URL(`../../posts/assets/${name}`, import.meta.url).href;
+                return /^https?:/.test(name) ? name : new URL(`../assets/post/${name}`, import.meta.url).href;
             };
         }
     }
