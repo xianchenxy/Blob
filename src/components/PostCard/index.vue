@@ -8,6 +8,10 @@ const props = defineProps<{ post: Ipost }>();
 
 const store = appStore();
 const isShadow = ref('always');
+
+function handleError(ev: Event) {
+	(ev.target as HTMLImageElement).src = store.getPostCoverSrc();
+}
 </script>
 
 <template>
@@ -22,6 +26,7 @@ const isShadow = ref('always');
 			<div class="cover_container">
 				<img :class="{ scale_up: isShadow === 'never' }"
 					 :src="store.getPostCoverSrc(post.cover)"
+					 :onerror="handleError"
 				/>
 			</div>
 			<!-- post信息 -->

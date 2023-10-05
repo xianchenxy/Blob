@@ -36,13 +36,17 @@ try {
 	console.debug('posts: ', post, 'postName: ', postName, 'mdFileFn', mdFileFn, 'globs', globs);
 	// router.push('/404');
 }
+
+function handleError(ev: Event) {
+	(ev.target as HTMLImageElement).src = store.getPostCoverSrc();
+}
 </script>
 
 <template>
 	<div class="container">
 		<!-- 作者信息介绍 -->
 		<div class="cover">
-			<img :src="store.getPostCoverSrc(postCover)" alt="cover" />
+			<img :src="store.getPostCoverSrc(postCover)" :onerror="handleError" alt="cover" />
 		</div>
 		<!-- 异步组件 -->
 		<div class="post-body vuepress-markdown-body" v-html="post" v-highlight></div>
