@@ -102,6 +102,15 @@
       "cover": "webpack.svg",
       "name": "webpack_build_multiple_pages_app",
       "style": "object-fit: contain;"
+    },
+    {
+      "title": "webpack5中 measure-webpack-plugin 的使用问题",
+      "tags": ["frontend", "JavaScript", "Webpack"],
+      "description": "measure-webpack-plugin",
+      "date": "2023-10-6 15:55:00",
+      "cover": "webpack.svg",
+      "name": "speed_measure_webpack_plugin",
+      "style": "object-fit: contain;"
     }
   ]
 }
