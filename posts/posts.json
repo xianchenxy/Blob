@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "title": "【设计模式】04-迭代器模式",
+      "tags": ["frontend", "JavaScript", "Design Pattern"],
+      "description": "foreach，统一遍历接口消除多if",
+      "cover": "https://i.ibb.co/jbQkhSj/iterator-pattern.png",
+      "style": "object-fit: fill",
+      "date": "2021-08-07 21:17:13",
+      "name": "iterator_pattern"
+    },
+    {
       "title": "【设计模式】03-代理模式",
       "tags": ["frontend", "JavaScript", "Design Pattern"],
       "description": "控制对象的访问，类摄政王制度",
@@ -12,7 +21,7 @@
       "title": "【设计模式】02-策略模式",
       "tags": ["frontend", "JavaScript", "Design Pattern"],
       "cover": "https://i.ibb.co/ts4HJfL/strategy-pattern.png",
-      "description": "中央集权制度",
+      "description": "中央集权制度，消除多if",
       "date": "2021-07-15 21:20:01",
       "name": "strategy_pattern"
     },
