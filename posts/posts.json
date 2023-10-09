@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "【设计模式】03-代理模式",
+      "tags": ["frontend", "JavaScript", "Design Pattern"],
+      "description": "控制对象的访问，类摄政王制度",
+      "cover": "https://i.ibb.co/YPV8wtk/proxy-pattern.png",
+      "date": "2021-08-07 21:14:46",
+      "name": "proxy_pattern"
+    },
+    {
       "title": "【设计模式】02-策略模式",
       "tags": ["frontend", "JavaScript", "Design Pattern"],
       "cover": "https://i.ibb.co/ts4HJfL/strategy-pattern.png",
