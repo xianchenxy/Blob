@@ -61,9 +61,10 @@
 
 </details>
 
+### defer、async的特点，加载时机
+略
 
 ### 说一下http2
-
 答案参考可以下
 [半小时搞懂 HTTP、HTTPS和HTTP2](https://juejin.cn/post/6894053426112495629#heading-50)
 
