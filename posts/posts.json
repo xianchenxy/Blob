@@ -28,6 +28,15 @@
       "name": "2023_futu_interview"
     },
     {
+      "title": "【设计模式】09-享元模式",
+      "tags": ["frontend", "JavaScript", "Design Pattern"],
+      "description": "共享、内外状态",
+      "cover": "https://i.ibb.co/J3mxqj5/flyweight-pattern.png",
+      "style": "object-fit: fill",
+      "date": "2021-08-09 22:13:41",
+      "name": "flyweight_pattern"
+    },
+    {
       "title": "【设计模式】08-模板方法模式",
       "tags": ["frontend", "JavaScript", "Design Pattern"],
       "description": "继承，模板，开放-封闭原则",
