@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "title": "2023巽风科技前端面试·三面（3年）",
+      "tags": ["frontend", "interview experience"],
+      "description": "巽风、面试题",
+      "cover": "https://i.ibb.co/FJMvrVD/xunfeng.webp",
+      "style": "object-fit: contain",
+      "date": "2023-10-26 10:00:00",
+      "name": "2023_xunfeng_interview"
+    },
+    {
       "title": "2023富途前端面试·三面（3年）",
       "tags": ["frontend", "interview experience"],
       "description": "富途、面试题",
