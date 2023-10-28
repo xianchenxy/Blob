@@ -8,6 +8,7 @@
 ### 有一个script资源，里面有一个for循环，里面是一些很耗时的操作
 看是否需要立刻加载，不是的话延后。然后考虑分时渲染，还有Web workers。
 增加进度条等提示。
+(20231024：后面在看promise的时候突然脑海里闪现出个画面，这里其实还可以通过`requestIdleCallback`或者`requestAnimationFrame`来实现，只不过[兼容性](https://caniuse.com/?search=requestIdleCallback)差，后者兼容性好些)
 
 ### 有很多静态资源要加载，一个域名和多个域名加载有什么不一样
 略。
@@ -17,6 +18,9 @@
 
 ### 说一下http2
 不了解，别问了。
+
+### 服务端的状态码中3xx通常表示重定向，说一下3xx里各个状态码的含义
+略。
 
 ### node了解过吗？
 不会。
