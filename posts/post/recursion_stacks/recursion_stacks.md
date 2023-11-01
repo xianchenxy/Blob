@@ -10,13 +10,13 @@
 
 递归的第一好处：简化思维，递归将任务划分为不同的分支，并逐渐将复杂的任务简化
 
-![](https://i.ibb.co/HxMdh5h/image-kzct-M5fo0.png)
+![](image/image__kzctM5fo0.png)
 
 
 
 递归的其它好处：简洁，如果分支数不多且任务简单，我们可以使用条件运算符让他更短
 
-![](https://i.ibb.co/X59MsNQ/image-x-UMLq-Prcad.png)
+![](image/image_xUMLqPrcad.png)
 
 
 
@@ -68,4 +68,4 @@ let list = {
 };
 ```
 
-![](https://i.ibb.co/D1VVQ11/image-ST3-C6lmz-Wz.png)
+![](image/image_ST3C6lmzWz.png)

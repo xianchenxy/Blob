@@ -8,9 +8,11 @@ const props = defineProps<{ post: Ipost }>();
 
 const store = appStore();
 const isShadow = ref('always');
-
 function handleError(ev: Event) {
-	(ev.target as HTMLImageElement).src = store.getPostCoverSrc();
+	const {src} = ev.target as HTMLImageElement;
+	if (src.indexOf('undefined') === -1 || src.indexOf(store.defaultFileName) === -1) {
+		(ev.target as HTMLImageElement).src = store.getPostCoverSrc();
+	}
 }
 </script>
 

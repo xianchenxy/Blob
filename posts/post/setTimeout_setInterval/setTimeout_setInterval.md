@@ -54,10 +54,10 @@
 就两次执行的时间间隔来说，`setInterval`实际上是小于`delay`的
 
 *setInterval:*
-![setInterval](https://i.ibb.co/JC8YNCZ/image-Tdutxj6-Ds-X.png)
+![setInterval](image/image_Tdutxj6DsX.png)
 
 *setTimeout:*
-![setTimeout](https://i.ibb.co/tQZdMXG/image-r4-FHfh-Yf2-O.png)
+![setTimeout](image/image_r4FHfhYf2O.png)
 
 ## 两者相同点
 

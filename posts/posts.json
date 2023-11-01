@@ -1,10 +1,18 @@
 {
   "posts": [
     {
+      "title": "typescript学习",
+      "tags": ["typescript"],
+      "description": "typescript",
+      "cover": "typescript-icon.png",
+      "date": "2023-10-26 10:00:00",
+      "name": "learn_typescript"
+    },
+    {
       "title": "2023巽风科技前端面试·三面（3年）",
       "tags": ["frontend", "interview experience"],
       "description": "巽风、面试题",
-      "cover": "https://i.ibb.co/FJMvrVD/xunfeng.webp",
+      "cover": "xunfeng-icon.png",
       "style": "object-fit: contain",
       "date": "2023-10-26 10:00:00",
       "name": "2023_xunfeng_interview"
@@ -13,7 +21,7 @@
       "title": "2023富途前端面试·三面（3年）",
       "tags": ["frontend", "interview experience"],
       "description": "富途、面试题",
-      "cover": "https://i.ibb.co/b5cm7wy/futu-logo.png",
+      "cover": "futu-icon.png",
       "style": "object-fit: contain",
       "date": "2023-10-16 17:00:00",
       "name": "2023_futu_interview3"
@@ -22,7 +30,7 @@
       "title": "2023富途前端面试·二面（3年）",
       "tags": ["frontend", "interview experience"],
       "description": "富途、面试题",
-      "cover": "https://i.ibb.co/b5cm7wy/futu-logo.png",
+      "cover": "futu-icon.png",
       "style": "object-fit: contain",
       "date": "2023-10-12 10:00:00",
       "name": "2023_futu_interview2"
@@ -31,7 +39,7 @@
       "title": "2023富途前端面试（3年）",
       "tags": ["frontend", "interview experience"],
       "description": "富途、面试题",
-      "cover": "https://i.ibb.co/b5cm7wy/futu-logo.png",
+      "cover": "futu-icon.png",
       "style": "object-fit: contain",
       "date": "2023-10-11 15:00:00",
       "name": "2023_futu_interview"
@@ -40,7 +48,7 @@
       "title": "【设计模式】09-享元模式",
       "tags": ["frontend", "JavaScript", "Design Pattern"],
       "description": "共享、内外状态",
-      "cover": "https://i.ibb.co/J3mxqj5/flyweight-pattern.png",
+      "cover": "#posts#design_patterns/flyweight_pattern.png",
       "style": "object-fit: fill",
       "date": "2021-08-09 22:13:41",
       "name": "flyweight_pattern"
@@ -49,7 +57,7 @@
       "title": "【设计模式】08-模板方法模式",
       "tags": ["frontend", "JavaScript", "Design Pattern"],
       "description": "继承，模板，开放-封闭原则",
-      "cover": "https://i.ibb.co/4snrjDb/template-pattern.png",
+      "cover": "#posts#design_patterns/template_pattern.png",
       "style": "object-fit: fill",
       "date": "2021-08-09 22:06:51",
       "name": "template_pattern"
@@ -58,7 +66,7 @@
       "title": "【设计模式】05-发布订阅模式",
       "tags": ["frontend", "JavaScript", "Design Pattern"],
       "description": "隐藏关联性，调度中心",
-      "cover": "https://i.ibb.co/7Gn3RFN/publish-subscribe-pattern.png",
+      "cover": "#posts#design_patterns/publish_subscribe_pattern.png",
       "style": "object-fit: fill",
       "date": "2021-08-07 21:22:08",
       "name": "publish_subscribe_pattern"
@@ -67,7 +75,7 @@
       "title": "【设计模式】04-迭代器模式",
       "tags": ["frontend", "JavaScript", "Design Pattern"],
       "description": "foreach，统一遍历接口消除多if",
-      "cover": "https://i.ibb.co/jbQkhSj/iterator-pattern.png",
+      "cover": "#posts#design_patterns/iterator_pattern.png",
       "style": "object-fit: fill",
       "date": "2021-08-07 21:17:13",
       "name": "iterator_pattern"
@@ -76,14 +84,14 @@
       "title": "【设计模式】03-代理模式",
       "tags": ["frontend", "JavaScript", "Design Pattern"],
       "description": "控制对象的访问，类摄政王制度",
-      "cover": "https://i.ibb.co/YPV8wtk/proxy-pattern.png",
+      "cover": "#posts#design_patterns/proxy_pattern.png",
       "date": "2021-08-07 21:14:46",
       "name": "proxy_pattern"
     },
     {
       "title": "【设计模式】02-策略模式",
       "tags": ["frontend", "JavaScript", "Design Pattern"],
-      "cover": "https://i.ibb.co/ts4HJfL/strategy-pattern.png",
+      "cover": "#posts#design_patterns/strategy_pattern.png",
       "style": "object-fit: fill",
       "description": "中央集权制度，消除多if",
       "date": "2021-07-15 21:20:01",
@@ -92,7 +100,7 @@
     {
       "title": "【设计模式】01-单例模式",
       "tags": ["frontend", "JavaScript", "Design Pattern"],
-      "cover": "https://i.ibb.co/cg80J1P/singleton-pattern.png",
+      "cover": "#posts#design_patterns/singleton_pattern.png",
       "description": "单实例、全局访问",
       "date": "2021-07-15 21:14:14",
       "name": "singleton_pattern"

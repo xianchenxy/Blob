@@ -1,42 +1,14 @@
-# vite+vuex4.x | hooks - useStore失效解决
 
-今天遇到了个让人`?`的bug
-
-## 需求情景
-
-引入`vuex - store`，使用`store.dispatch`向`action`派发任务
-
-```typescript
-  //组ITodo，并dispatch给action
-  function setTodo(todoValue: string): void {
-    const store: Store<any> = useStore();
-
-    const todo: ITodo = {
-      id: new Date().getTime(),
-      content: todoValue,
-      status: "willdo",
-    };
-
-    store.dispatch(SET_TODO, todo);
-  }
-```
-
-import
-
-```typescript
-import { Store, useStore } from "vuex";
-
-```
 
 ## Error
 
-![img](https://i.ibb.co/Kh9pH6T/image-Jba-XF9-C3-JB.png)
+![img](image/image_JbaXF9C3JB.png)
 
 很明显，此处的`store`获取失败
 
 且warn提示`useStore`只能使用在`setup()`中，无语，该hooks正是引入组件`setup`中
 
-![img](https://i.ibb.co/C0Rd600/image-df-IMbw-U1-AP.png)
+![img](image/image_dfIMbwU1AP.png)
 
 ## Solution
 
@@ -92,7 +64,7 @@ export const store = createStore(...)
 
 warn和error消失
 
-![img](https://i.ibb.co/R6YhXWh/image-1-STSBYgtrs.png)
+![img](image/image_1STSBYgtrs.png)
 
 ## 问题溯源
 

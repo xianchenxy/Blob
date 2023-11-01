@@ -13,7 +13,7 @@
 
 ## 3. 如何去使用
 > 似古代摄政王制度。
-![https://baike.baidu.com/item/%E6%91%84%E6%94%BF%E7%8E%8B?fromModule=lemma_search-box](https://i.ibb.co/MgxXZWF/proxy1.png)
+![摄政王定义](#design_patterns#proxy1.png)
 > 增加一层代理层，外界无法直接访问到真正的对象，由代理层接受外部输入，再转达被代理对象。
 
 ## 4. 举个栗子
@@ -46,10 +46,10 @@ proxyImage("https://www.baidu.com/img/flexible/logo/pc/result@2.png")
 
 ## 5. 开发实践
 > 之前开发的时候出现过一个问题，弹窗打开缓慢，数据最少的打开都需要1.2s以上，后来发现是由于初始化的组件比较复杂导致耗时长。
-![code 1](https://i.ibb.co/C6YQm7S/proxy2.png)
+![code 1](#design_patterns#proxy2.png)
 
 虚拟代理的方式进行优化：
-![code 2](https://i.ibb.co/C1qNkV3/proxy3.png)
+![code 2](#design_patterns#proxy3.png)
 
 ## 6. 评价
 > 代理的优势不言而喻，增加了代理层，可以有效地提升对被代理对象的保护/优化，但也因此增加了代码复杂程度，

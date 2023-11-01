@@ -26,7 +26,23 @@ try {
 		}
 	}
 	// 动态导入md，异步导出html
-	const {html} = await mdFileFn!();
+	let {html} = await mdFileFn!();
+	// 获取到md文件中所有的相对路径图片
+	html = html.replace(/(?<=<img\ssrc=('|"))(.+?)(?=\1)/g, function (imgSrc: string) {
+		// 处理非http链接的图片
+		if (!/^https?/.test(imgSrc)) {
+			// 需要进行转换的路径（通常为系列专栏，例如设计模式design_patterns
+			if (/^#(.*?)#/.test(imgSrc)) {
+				const prefix = imgSrc.match(/^#(.*?)#/)![1];
+				imgSrc = imgSrc.replace(/^#.*?#/, '');
+				return new URL(`../../posts/post/${prefix}/${imgSrc}`, import.meta.url).href;
+			}
+			// 不需要转换，可直接用
+			return new URL(`../../posts/post/${postName}/${imgSrc}`, import.meta.url).href;
+		}
+		return imgSrc;
+	});
+
 	post.value = html;
 	const {cover} = posts.filter(post => post.name === postName)[0];
 	postCover.value = cover;
@@ -38,7 +54,10 @@ try {
 }
 
 function handleError(ev: Event) {
-	(ev.target as HTMLImageElement).src = store.getPostCoverSrc();
+	const {src} = ev.target as HTMLImageElement;
+	if (src.indexOf('undefined') === -1 || src.indexOf(store.defaultFileName) === -1) {
+		(ev.target as HTMLImageElement).src = store.getPostCoverSrc();
+	}
 }
 </script>
 

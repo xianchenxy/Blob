@@ -439,6 +439,9 @@
 .vuepress-markdown-body tr:nth-child(2n) {
   background-color: #f6f8fa;
 }
+html.dark .vuepress-markdown-body tr:nth-child(2n) {
+  background-color: #37393c;
+}
 .vuepress-markdown-body td,
 .vuepress-markdown-body th {
   padding: 0.6em 1em;
