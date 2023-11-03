@@ -1,14 +1,6 @@
 {
   "posts": [
     {
-      "title": "typescript学习",
-      "tags": ["typescript"],
-      "description": "typescript",
-      "cover": "typescript-icon.png",
-      "date": "2023-10-26 10:00:00",
-      "name": "learn_typescript"
-    },
-    {
       "title": "2023巽风科技前端面试·三面（3年）",
       "tags": ["frontend", "interview experience"],
       "description": "巽风、面试题",
