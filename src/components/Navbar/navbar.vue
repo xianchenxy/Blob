@@ -5,7 +5,7 @@ import {computed, Ref} from '@vue/reactivity';
 import {PropType, ref} from 'vue';
 import {useRouter} from 'vue-router';
 import sideBar from './sideBar.vue';
-import themeChanger from './themeChanger.vue';
+import ThemeChange from './themeChanger.vue';
 import BackgroundMusic from './backgroundMusic.vue';
 import user from '@DataConfig/user.json';
 
@@ -66,9 +66,9 @@ const title = ref('ZhangHuaqing\'s Blog\n');
 				</router-link>
 			</el-col>
 			<!-- 主题切换组件 -->
-			<el-col :span="4" class="nav-item" style="flex-direction: row-reverse;">
-				<BackgroundMusic style="margin-right: 20px;"></BackgroundMusic>
-				<themeChanger style="margin-right: 20px"></themeChanger>
+			<el-col :span="4" class="nav-item" style="flex-direction: row-reverse;gap: 20px;">
+				<BackgroundMusic></BackgroundMusic>
+				<ThemeChange></ThemeChange>
 			</el-col>
 		</el-row>
 	</div>
@@ -81,6 +81,7 @@ const title = ref('ZhangHuaqing\'s Blog\n');
 	box-sizing: border-box;
 	z-index: 1000;
 	min-height: 64px;
+	margin: 0 1.2em;
 	// background-color: var(--el-color-white);
 	border-radius: 0 0 24px 24px;
 
@@ -89,7 +90,6 @@ const title = ref('ZhangHuaqing\'s Blog\n');
 
 	span {
 		display: block;
-		margin-left: 1.2em;
 		font-size: 1.17rem;
 		font-weight: 600;
 	}

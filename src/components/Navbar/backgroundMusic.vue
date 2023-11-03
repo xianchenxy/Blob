@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import {onMounted, ref} from 'vue';
 import {appStore} from '@/stores';
+import {ElMessageBox, ElNotification} from 'element-plus';
+import 'element-plus/theme-chalk/src/message-box.scss';
+import 'element-plus/theme-chalk/src/notification.scss';
 
 let isPlay = ref(false);
 const store = appStore();
@@ -9,25 +12,51 @@ interface CustomAudio extends HTMLAudioElement {
 }
 
 import audioFile from '../../../public/audio/FreeLoop.mp3';
+
 const audio = ref<CustomAudio | null>(null);
-
-function handleClick() {
-	if (isPlay.value) {
-		audio.value!.pause();
-		isPlay.value = false;
-	} else {
-		audio.value!.play();
-		audio.value!.volume = 0.7;
-		isPlay.value = true;
-	}
-}
-
 onMounted(() => {
 	audio.value!.addEventListener('ended', () => {
 		isPlay.value = false;
 	});
 });
 
+function handleClick() {
+	if (isPlay.value) {
+		audio.value!.pause();
+		isPlay.value = false;
+	} else {
+		const confirmTime = sessionStorage.getItem('no-confirm-volume');
+		let promise: Promise<any> = Promise.resolve();
+
+		if (!confirmTime || +confirmTime < +Date.now()) {
+			promise = ElMessageBox.alert('请注意音量哦', '确定播放背景音乐吗？', {
+				type: 'warning',
+				confirmButtonText: 'OK，播放吧',
+				showCancelButton: true,
+				cancelButtonText: '先等等~'
+			});
+
+			promise.then(() => {
+				// 确认加一个0.5h有效期，避免重复确认
+				sessionStorage.setItem('no-confirm-volume', (+Date.now() + 3600 / 2 * 1000).toString());
+			}, () => {
+			});
+		}
+
+		promise.then(() => {
+			audio.value!.play();
+			audio.value!.volume = 0.7;
+			isPlay.value = true;
+
+			ElNotification({
+				title: `歌曲：《${store.defaultMusic}》已播放`,
+				message: '请欣赏~',
+				position: 'bottom-right'
+			});
+		}, () => {
+		});
+	}
+}
 </script>
 
 <template>

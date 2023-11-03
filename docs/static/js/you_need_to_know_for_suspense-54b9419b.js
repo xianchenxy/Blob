@@ -1,3 +1,0 @@
-import"./vue-126afe2a.js";import{o as n,c as s,S as u,a as t}from"./@vue-268a4df7.js";const h={},d=`<p>title: Vue Suspense \u2014 Everything You Need to Know</p>
-<p>link: https://vueschool.io/articles/vuejs-tutorials/suspense-everything-you-need-to-know/</p>
-`,r=t("p",null,"title: Vue Suspense \u2014 Everything You Need to Know",-1),i=t("p",null,"link: https://vueschool.io/articles/vuejs-tutorials/suspense-everything-you-need-to-know/",-1);function o(e,l){return n(),s(u,null,[r,i],64)}const c={render:o};c.__hmrId="/Users/xianchenxy/Documents/Blog/posts/post/you_need_to_know_for_suspense.md";const _=e=>({components:e,render:o});export{c as VueComponent,_ as VueComponentWith,h as attributes,d as html};

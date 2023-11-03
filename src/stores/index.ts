@@ -5,6 +5,7 @@ export const appStore = defineStore({
     id: 'app',
     state() {
         return {
+            defaultMusic: 'FreeLoop',
             isDark: useDark(),
             defaultFileName: 'default.png'
         };
