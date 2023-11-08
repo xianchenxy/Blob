@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "title": "2023米哈游前端面试·一面（3年）",
+      "tags": ["米哈游", "frontend", "interview experience"],
+      "description": "米哈游、面试题",
+      "cover": "mihayou-icon.png",
+      "style": "object-fit: contain",
+      "date": "2023-11-8 14:00:00",
+      "name": "2023_mihayou_interview"
+    },
+    {
       "title": "typescript核心",
       "tags": ["typescript", "core content"],
       "description": "typescript",
