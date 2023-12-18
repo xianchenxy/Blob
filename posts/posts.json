@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "title": "如何安装mac navicat15版本应用（破解）",
+      "tags": ["navicat高版本", "macOS高版本"],
+      "description": "解决navicat高版本在高版本macOS中无法直接安装成功的问题（文末附软件下载链接）",
+      "cover": "navicat15-icon.png",
+      "style": "object-fit: contain",
+      "date": "2023-12-18 21:11:00",
+      "name": "how_to_install_navicat_in_macOS14"
+    },
+    {
       "title": "2023米哈游前端面试·一面（3年）",
       "tags": ["米哈游", "frontend", "interview experience"],
       "description": "米哈游、面试题",
